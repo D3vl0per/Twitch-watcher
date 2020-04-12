@@ -22,7 +22,7 @@ const scrollTimes = 5;
 
 (async () => {
 
-  const browser = await puppeteer.launch({ headless: false , ignoreDefaultArgs: ['--mute-audio']});
+  const browser = await puppeteer.launch({ headless: true , ignoreDefaultArgs: ['--mute-audio']});
   const page = await browser.newPage();
   await page.setUserAgent(userAgent);
   var cookies = await checkLoginData();
