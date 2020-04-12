@@ -9,8 +9,7 @@ I spent two days watching Valorant streams to get a drop. I got bored...
 
  - Windows or Linux OS
  - Network connection (So obvious...)
- - [Nodejs]([https://nodejs.org/en/download/](https://nodejs.org/en/download/))
- - [NPM](https://www.npmjs.com/get-npm)
+ - [Nodejs](https://nodejs.org/en/download/) and [NPM](https://www.npmjs.com/get-npm)
  - [screen](https://linuxize.com/post/how-to-use-linux-screen/) (Optional, just for background running)
 
 
