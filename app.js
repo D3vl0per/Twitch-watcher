@@ -67,7 +67,23 @@ async function checkLoginData() {
             console.log(err);
         }
       });
-      return input;
+      const cookie = [
+            {
+                "domain": ".twitch.tv",
+                "expirationDate": input.expDate,
+                "hostOnly": false,
+                "httpOnly": false,
+                "name": "auth-token",
+                "path": "/",
+                "sameSite": "no_restriction",
+                "secure": true,
+                "session": false,
+                "storeId": "0",
+                "value": input.token,
+                "id": 1
+            }
+        ];
+      return cookie;
     }
   } catch(err) {
     console.error(err)

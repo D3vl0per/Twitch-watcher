@@ -1,6 +1,7 @@
 # Valorant watcher
-I spent two days watching Valorant streams to get a drop. I got bored...
+I spent two days watching Valorant streams to get a drop. I got bored...   
 
+[![asciicast](https://asciinema.org/a/318938.svg)](https://asciinema.org/a/318938)
 ## Installation
 
 1. Login your twitch account
