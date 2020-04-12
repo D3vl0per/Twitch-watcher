@@ -14,7 +14,7 @@ const configPath = './config.json'
 const baseUrl = 'https://www.twitch.tv/';
 const userAgent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36';
 const streamersUrl = 'https://www.twitch.tv/directory/game/VALORANT?tl=c2542d6d-cd10-4532-919b-3d19f30a768b';
-const firstLoadTime = 2000;
+const firstLoadTime = 6000;
 const scrollDelay = 2000;
 const scrollTimes = 5;
 
@@ -22,13 +22,12 @@ const scrollTimes = 5;
 
 (async () => {
 
-  const browser = await puppeteer.launch({ headless: true , ignoreDefaultArgs: ['--mute-audio']});
+  const browser = await puppeteer.launch({ headless: false , ignoreDefaultArgs: ['--mute-audio']});
   const page = await browser.newPage();
   await page.setUserAgent(userAgent);
   var cookies = await checkLoginData();
   await page.setCookie(...cookies);
   await choiceOptions(page);
-
   await browser.close();
 })();
 
@@ -95,7 +94,7 @@ async function getAllStreamer(page) {
   console.log('View page');
   await page.waitFor(firstLoadTime);
   console.log('Scroll to bottom to trigger the JS worker');
-  await scroll(page);
+  await scroll(page, scrollTimes);
   let bodyHTML = await page.evaluate(() => document.body.innerHTML);
   let $ = cheerio.load(bodyHTML);
   const jquery = $('a[data-test-selector*="ChannelLink"]');
@@ -104,7 +103,7 @@ async function getAllStreamer(page) {
   for (var i = 0; i < jquery.length; i++) {
     streamers[i] = jquery[i].attribs.href.split("/")[1]
   }
-  console.log('Save users to json file');
+  console.log('Save users to ' + streamersPath +' file');
   fs.writeFile(streamersPath, JSON.stringify(streamers), function(err) {
     if (err) {
         console.log(err);
@@ -112,8 +111,8 @@ async function getAllStreamer(page) {
   });
 }
 
-async function scroll(page,scrollTimes) {
-  for (var i = 0; i < scrollTimes; i++) {
+async function scroll(page,times) {
+  for (var i = 0; i < times; i++) {
     await page.evaluate(async(page) => {
       var x = document.getElementsByClassName("scrollable-trigger__wrapper");
       x[0].scrollIntoView();

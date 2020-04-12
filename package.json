@@ -9,9 +9,9 @@
   "author": "D3v <info@zsmark.dev>",
   "license": "MIT",
   "repository": {
-      "type": "git",
-      "url": "https://github.com/ashleygwilliams/my_package.git"
-    },
+    "type": "git",
+    "url": "https://github.com/D3vl0per/Valorant-watcher"
+  },
   "dependencies": {
     "@wdio/cli": "^6.0.15",
     "chalk": "^4.0.0",
