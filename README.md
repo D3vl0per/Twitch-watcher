@@ -1,7 +1,18 @@
+
 # Valorant watcher
-I spent two days watching Valorant streams to get a drop. I got bored...   
+I spent two days watching Valorant streams to get a drop. I got bored...  
+
+![GitHub package.json version](https://img.shields.io/github/package-json/v/D3vl0per/Valorant-watcher) ![GitHub](https://img.shields.io/github/license/D3vl0per/Valorant-watcher)  ![GitHub repo size](https://img.shields.io/github/repo-size/D3vl0per/Valorant-watcher) ![GitHub issues](https://img.shields.io/github/issues/D3vl0per/Valorant-watcher)
 
 [![asciicast](https://asciinema.org/a/318938.svg)](https://asciinema.org/a/318938)
+## Requirements
+
+ - Windows or Linux OS
+ - Network connection (So obvious...)
+ - [Nodejs]([https://nodejs.org/en/download/](https://nodejs.org/en/download/)) and [NPM](https://www.npmjs.com/get-npm)
+ - [screen](https://linuxize.com/post/how-to-use-linux-screen/) (Optional)
+
+
 ## Installation
 
 1. Login your twitch account
@@ -12,12 +23,20 @@ I spent two days watching Valorant streams to get a drop. I got bored...
 6. Install the dependencies with `npm install`
 7. After start the program with `npm start`
 
+## Dependencies
+
+![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/puppeteer)   ![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/chrome-launcher) ![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/dayjs) ![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/inquirer) ![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/cheerio) ![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/chalk)
+
 
 ## Troubleshooting
 
+### How token does it look like?
+auth-token: `rxk38rh5qtyw95fkvm7kgfceh4mh6u`  
+expire date: `2020-04-13T22:22:22.010Z`  
+___
 
 ### Setting Up Chrome Linux Sandbox
-___
+
 In order to protect the host environment from untrusted web content, Chrome uses [multiple layers of sandboxing](https://chromium.googlesource.com/chromium/src/+/HEAD/docs/linux_sandboxing.md). For this to work properly,
 the host should be configured first. If there's no good sandbox for Chrome to use, it will crash
 with the error `No usable sandbox!`.
@@ -67,18 +86,28 @@ or `.zshenv`:
 export CHROME_DEVEL_SANDBOX=/usr/local/sbin/chrome-devel-sandbox
 ```
 
-By puppeter wiki: [https://github.com/puppeteer/puppeteer/blob/master/docs/troubleshooting.md](https://github.com/puppeteer/puppeteer/blob/master/docs/troubleshooting.md)
-
-### Streamer.json is empty
+By puppeteer wiki: [https://github.com/puppeteer/puppeteer/blob/master/docs/troubleshooting.md](https://github.com/puppeteer/puppeteer/blob/master/docs/troubleshooting.md)
 ___
+### streamers.json is empty?
+
 Try to again with higher delay.
 Default delay:
-
-    const firstLoadTime = 6000;
-    const scrollDelay = 2000;
-
-### Something is not working
+```javascript
+const scrollDelay = 2000;
+```
 ___
+### Something went wrong?
 Try to non-headless mode. Edit headless value to `true`, like this:
+```javascript
+const browser = await puppeteer.launch({ headless: true , ignoreDefaultArgs: ['--mute-audio']});
+```
+## Support
+ - Keybase at [https://keybase.io/d3v_](https://keybase.io/d3v_) ![Keybase PGP](https://img.shields.io/keybase/pgp/d3v_)
+ - Website at [https://zsmark.dev](https://zsmark.dev)
+## Donations
+[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/D3v)
 
-    const browser = await puppeteer.launch({ headless: true , ignoreDefaultArgs: ['--mute-audio']});
+## Disclaimer
+These codes for educational and research purposes only.
+Do not attempt to violate the law with anything contained here.
+I will not be responsible for your any illegal actions.
