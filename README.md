@@ -9,8 +9,9 @@ I spent two days watching Valorant streams to get a drop. I got bored...
 
  - Windows or Linux OS
  - Network connection (So obvious...)
- - [Nodejs]([https://nodejs.org/en/download/](https://nodejs.org/en/download/)) and [NPM](https://www.npmjs.com/get-npm)
- - [screen](https://linuxize.com/post/how-to-use-linux-screen/) (Optional)
+ - [Nodejs]([https://nodejs.org/en/download/](https://nodejs.org/en/download/))
+ - [NPM](https://www.npmjs.com/get-npm)
+ - [screen](https://linuxize.com/post/how-to-use-linux-screen/) (Optional, just for background running)
 
 
 ## Installation
@@ -25,7 +26,7 @@ I spent two days watching Valorant streams to get a drop. I got bored...
 
 ## Dependencies
 
-![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/puppeteer)   ![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/chrome-launcher) ![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/dayjs) ![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/inquirer) ![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/cheerio) ![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/chalk)
+![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/puppeteer)   ![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/chrome-launcher) ![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/dayjs) ![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/inquirer) ![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/cheerio)
 
 
 ## Troubleshooting
