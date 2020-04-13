@@ -1,6 +1,6 @@
 {
   "name": "valorant-bot",
-  "version": "1.0.3",
+  "version": "1.0.2",
   "description": "Automatic watching the twitch to get valorant drop",
   "main": "app.js",
   "scripts": {
@@ -18,6 +18,6 @@
     "dayjs": "^1.8.24",
     "dotenv": "^8.2.0",
     "inquirer": "^7.1.0",
-    "puppeteer": "^2.1.1"
+    "puppeteer": "^1.19.0"
   }
 }

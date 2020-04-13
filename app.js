@@ -1,3 +1,4 @@
+require('dotenv').config();
 const puppeteer = require('puppeteer');
 const dayjs = require('dayjs');
 const chromeLauncher = require('chrome-launcher');
@@ -16,10 +17,15 @@ const streamersUrl = 'https://www.twitch.tv/directory/game/VALORANT?tl=c2542d6d-
 const scrollDelay = 2000;
 const scrollTimes = 5;
 
-
-
 (async () => {
-  const browser = await puppeteer.launch({ headless: true , ignoreDefaultArgs: ['--mute-audio']});
+  console.clear();
+  console.log("=========================");
+  var browser;
+  if (process.env.exec) {
+    browser = await puppeteer.launch({ headless: true, executablePath: process.env.exec, ignoreDefaultArgs: ['--mute-audio'], args: ['--no-sandbox', '--disable-setuid-sandbox']});
+  } else {
+    browser = await puppeteer.launch({ headless: true, ignoreDefaultArgs: ['--mute-audio']});
+  }
   const page = await browser.newPage();
 
   console.log('🔧 Set User-Agent');
@@ -28,9 +34,15 @@ const scrollTimes = 5;
   var cookies = await readLoginData();
   console.log('🔧 Set auth cookie');
   await page.setCookie(...cookies);
+  process.stdout.write('🔐 Checking login...  ');
   await checkLogin(page);
 
-  await choiceOptions(page);
+  console.log("=========================");
+  console.log('📡 Check active streamers');
+  let streamers = await getAllStreamer(page);
+  console.log("=========================");
+  console.log('📌 Run watcher');
+  await viewRandomPage(page, streamers)
 
   await browser.close();
 })();
@@ -52,8 +64,9 @@ async function readLoginData() {
     ];
   try {
     process.stdout.write('🔎 Check config file...  ');
+
     if (fs.existsSync(configPath)) {
-      console.log('✅ Found');
+      console.log('✅ Json config found');
       let configFile = JSON.parse(fs.readFileSync(configPath, 'utf8'))
       if (dayjs().format() > dayjs(configFile.expDate).unix()) {
         console.log("🛑 Expired cookie, please login again!");
@@ -66,10 +79,22 @@ async function readLoginData() {
           return cookie;
       }
     }
+    else if (process.env.token && process.env.date){
+      console.log('✅ Env config found');
+      if (dayjs().format() > dayjs(process.env.date).unix()) {
+        console.log("🛑 Expired cookie, please login again!");
+        process.exit();
+      }
+      else {
+        cookie[0].expirationDate = process.env.date;
+        cookie[0].value = process.env.token;
+        return cookie;
+      }
+    }
     else {
       console.log('❌ Create config file');
       let input = await inquirer.askLogin();
-      input.expDate = dayjs(input.expDate.replace(/\s/g, '')).unix();
+      input.expDate = dayjs(input.expDate.replace(/\s/g, ''));
       fs.writeFile(configPath, JSON.stringify(input), function(err) {
         if (err) {
             console.log(err);
@@ -85,24 +110,8 @@ async function readLoginData() {
   }
 }
 
-async function choiceOptions(page) {
-
-  var input = await inquirer.askOptions();
-
-  switch (input.options) {
-
-    case '📡 Check active streamers':
-      await getAllStreamer(page);
-      return choiceOptions(page);
-
-    case '📌 Run watcher':
-      await viewRandomPage(page)
-      break;
-  }
-}
-
 async function getAllStreamer(page) {
-  console.log('\n📨 Go to Twitch.tv');
+  console.log('📨 Go to Twitch.tv');
   console.log('⏰ Waiting for loading...');
 
   await page.goto(streamersUrl, {"waitUntil" : "networkidle0"});
@@ -118,13 +127,7 @@ async function getAllStreamer(page) {
   for (var i = 0; i < jquery.length; i++) {
     streamers[i] = jquery[i].attribs.href.split("/")[1]
   }
-
-  console.log('📁 Save streamers to' + streamersPath +' file\n');
-  fs.writeFile(streamersPath, JSON.stringify(streamers), function(err) {
-    if (err) {
-        console.log(err);
-    }
-  });
+  return streamers;
 }
 
 async function scroll(page,times) {
@@ -138,11 +141,13 @@ async function scroll(page,times) {
   }
 }
 
-async function viewRandomPage(page) {
-  var streamers = JSON.parse(fs.readFileSync(streamersPath, 'utf8'));
-  console.log('\n📁 Streamers loaded from file');
+async function viewRandomPage(page, streamers) {
   await page.setViewport({width: 1280, height: 1280});
+  var last_refresh = dayjs().add(2, 'hour');
   while (run) {
+    if (dayjs(last_refresh).isBefore(dayjs())){
+      streamers = await getAllStreamer(page);
+    }
     let watch = streamers[getRandomInt(0, streamers.length)];
     var sleep = getRandomInt(6,10)*60000;
 
@@ -155,7 +160,6 @@ async function viewRandomPage(page) {
 }
 
 async function checkLogin(page) {
-    process.stdout.write('🔐 Checking login...  ');
     await page.goto(baseUrl, {"waitUntil" : "networkidle0"});
     let cookieSetByServer = await page.cookies();
     for (var i = 0; i < cookieSetByServer.length; i++) {
