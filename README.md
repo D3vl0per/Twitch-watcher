@@ -27,7 +27,7 @@
 
 ## Docker
 <p align="center">
-<img alt="Docker Build Status" src="https://img.shields.io/docker/build/d3vm/Valorant-watcher"> <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/d3vm/valorat-watcher"> <img alt="Docker Image Size (latest by date)" src="https://img.shields.io/docker/image-size/d3vm/valorat-watcher">
+<img alt="Docker Cloud Build Status" src="https://img.shields.io/docker/cloud/build/d3vm/valorant-watcher"> <img alt="Docker Image Version (latest by date)" src="https://img.shields.io/docker/v/d3vm/valorant-watcher"> <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/d3vm/valorant-watcher"> <img alt="Docker Image Size (latest by date)" src="https://img.shields.io/docker/image-size/d3vm/valorant-watcher">
 </p>
 
 ### Requirements

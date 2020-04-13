@@ -1,7 +1,7 @@
 version: '3.5'
 services:
   valorant-watcher:
-    image: valorant:test
+    image: d3vm/valorant-watcher
     restart: always
     environment:
       - token=rxk38rh5qtyw95fkvm7kgfceh4mh6u #Example value from readme

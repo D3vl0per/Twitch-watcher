@@ -170,7 +170,9 @@ async function checkLogin(page) {
     }
     console.log('\n🛑 Login failed!');
     console.log('🔑 Wrong token!');
-    fs.unlinkSync(configPath);
+    if (!process.env.token){
+      fs.unlinkSync(configPath);
+    }
     process.exit()
 }
 
