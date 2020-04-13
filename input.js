@@ -39,7 +39,7 @@ exports.askLogin = () => {
     ];
     return inquirer.prompt(questions);
   }
-
+/*
 exports.askOptions = () => {
     const questions = [
       {
@@ -60,3 +60,4 @@ exports.askOptions = () => {
     ];
     return inquirer.prompt(questions);
   }
+*/

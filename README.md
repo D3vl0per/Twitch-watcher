@@ -1,10 +1,18 @@
 
+
 # Valorant watcher
-I spent two days watching Valorant streams to get a drop. I got bored...  
+<center> I spent two days watching Valorant streams to get a drop. I got bored...  </center>
+<center>
+<img alt="GitHub tag (latest by date)" src="https://img.shields.io/github/v/tag/D3vl0per/Valorant-watcher">
+<img alt="GitHub" src="https://img.shields.io/github/repo-size/D3vl0per/Valorant-watcher">
+<img alt="GitHub repo size" src="https://img.shields.io/github/license/D3vl0per/Valorant-watcher">
+<img alt="GitHub issues" src="https://img.shields.io/github/issues/D3vl0per/Valorant-watcher">
 
-![GitHub package.json version](https://img.shields.io/github/package-json/v/D3vl0per/Valorant-watcher) ![GitHub](https://img.shields.io/github/license/D3vl0per/Valorant-watcher)  ![GitHub repo size](https://img.shields.io/github/repo-size/D3vl0per/Valorant-watcher) ![GitHub issues](https://img.shields.io/github/issues/D3vl0per/Valorant-watcher)
+<a href="https://asciinema.org/a/E4bhVEjYsiZ8fLHqIuVXOiBGb" target="_blank"><img src="https://asciinema.org/a/E4bhVEjYsiZ8fLHqIuVXOiBGb.svg" /></a>
+</center>
 
-[![asciicast](https://asciinema.org/a/318938.svg)](https://asciinema.org/a/318938)
+
+
 ## Requirements
 
  - Windows or Linux OS
@@ -23,10 +31,29 @@ I spent two days watching Valorant streams to get a drop. I got bored...
 6. Install the dependencies with `npm install`
 7. After start the program with `npm start`
 
+## Docker
+<center>
+<img alt="Docker Build Status" src="https://img.shields.io/docker/build/d3vm/Valorant-watcher">
+<img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/d3vm/valorat-watcher">
+<img alt="Docker Image Size (latest by date)" src="https://img.shields.io/docker/image-size/d3vm/valorat-watcher">
+</center>
+
+### Requirements
+- [Docker](https://docs.docker.com/get-docker/)
+- [Docker compose](https://docs.docker.com/compose/install/)
+### Useage
+1. Download docker-compose-example.yml
+2. Rename docker-compose.yml
+3. Replace environments
+4. Run `docker-compose up -d`
 ## Dependencies
-
-![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/puppeteer)   ![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/chrome-launcher) ![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/dayjs) ![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/inquirer) ![GitHub package.json dependency version (subfolder of monorepo)](https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/cheerio)
-
+<center>
+<img alt="GitHub package.json dependency version (subfolder of monorepo)" src="https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/puppeteer">
+<img alt="GitHub package.json dependency version (subfolder of monorepo)" src="https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/chrome-launcher">
+<img alt="GitHub package.json dependency version (subfolder of monorepo)" src="https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/cheerio">
+<img alt="GitHub package.json dependency version (subfolder of monorepo)" src="https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/inquirer">
+<img alt="GitHub package.json dependency version (subfolder of monorepo)" src="https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/dotenv">
+</center>
 
 ## Troubleshooting
 
