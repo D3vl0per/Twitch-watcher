@@ -1,5 +1,5 @@
 
-<h1 align="center">Valorant watcher<h1>
+<h1 align="center">Valorant watcher</h1>
 <p align="center"> I spent two days watching Valorant streams to get a drop. I got bored...</p>
 <p align="center">
 <img alt="GitHub tag (latest by date)" src="https://img.shields.io/github/v/tag/D3vl0per/Valorant-watcher"> <img alt="GitHub" src="https://img.shields.io/github/repo-size/D3vl0per/Valorant-watcher"> <img alt="GitHub repo size" src="https://img.shields.io/github/license/D3vl0per/Valorant-watcher"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/D3vl0per/Valorant-watcher"> <a href="https://asciinema.org/a/E4bhVEjYsiZ8fLHqIuVXOiBGb" target="_blank"><img src="https://asciinema.org/a/E4bhVEjYsiZ8fLHqIuVXOiBGb.svg" /></a>
