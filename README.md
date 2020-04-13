@@ -1,15 +1,10 @@
 
 
 # Valorant watcher
-<center> I spent two days watching Valorant streams to get a drop. I got bored...  </center>
-<center>
-<img alt="GitHub tag (latest by date)" src="https://img.shields.io/github/v/tag/D3vl0per/Valorant-watcher">
-<img alt="GitHub" src="https://img.shields.io/github/repo-size/D3vl0per/Valorant-watcher">
-<img alt="GitHub repo size" src="https://img.shields.io/github/license/D3vl0per/Valorant-watcher">
-<img alt="GitHub issues" src="https://img.shields.io/github/issues/D3vl0per/Valorant-watcher">
-
-<a href="https://asciinema.org/a/E4bhVEjYsiZ8fLHqIuVXOiBGb" target="_blank"><img src="https://asciinema.org/a/E4bhVEjYsiZ8fLHqIuVXOiBGb.svg" /></a>
-</center>
+<p align="center"> I spent two days watching Valorant streams to get a drop. I got bored...</p>
+<p align="center">
+<img alt="GitHub tag (latest by date)" src="https://img.shields.io/github/v/tag/D3vl0per/Valorant-watcher"> <img alt="GitHub" src="https://img.shields.io/github/repo-size/D3vl0per/Valorant-watcher"> <img alt="GitHub repo size" src="https://img.shields.io/github/license/D3vl0per/Valorant-watcher"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/D3vl0per/Valorant-watcher"> <a href="https://asciinema.org/a/E4bhVEjYsiZ8fLHqIuVXOiBGb" target="_blank"><img src="https://asciinema.org/a/E4bhVEjYsiZ8fLHqIuVXOiBGb.svg" /></a>
+</p>
 
 
 
@@ -32,11 +27,9 @@
 7. After start the program with `npm start`
 
 ## Docker
-<center>
-<img alt="Docker Build Status" src="https://img.shields.io/docker/build/d3vm/Valorant-watcher">
-<img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/d3vm/valorat-watcher">
-<img alt="Docker Image Size (latest by date)" src="https://img.shields.io/docker/image-size/d3vm/valorat-watcher">
-</center>
+<p align="center">
+<img alt="Docker Build Status" src="https://img.shields.io/docker/build/d3vm/Valorant-watcher"> <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/d3vm/valorat-watcher"> <img alt="Docker Image Size (latest by date)" src="https://img.shields.io/docker/image-size/d3vm/valorat-watcher">
+</p>
 
 ### Requirements
 - [Docker](https://docs.docker.com/get-docker/)
@@ -47,13 +40,9 @@
 3. Replace environments
 4. Run `docker-compose up -d`
 ## Dependencies
-<center>
-<img alt="GitHub package.json dependency version (subfolder of monorepo)" src="https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/puppeteer">
-<img alt="GitHub package.json dependency version (subfolder of monorepo)" src="https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/chrome-launcher">
-<img alt="GitHub package.json dependency version (subfolder of monorepo)" src="https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/cheerio">
-<img alt="GitHub package.json dependency version (subfolder of monorepo)" src="https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/inquirer">
-<img alt="GitHub package.json dependency version (subfolder of monorepo)" src="https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/dotenv">
-</center>
+<p align="center">
+<img alt="GitHub package.json dependency version (subfolder of monorepo)" src="https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/puppeteer"> <img alt="GitHub package.json dependency version (subfolder of monorepo)" src="https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/chrome-launcher"> <img alt="GitHub package.json dependency version (subfolder of monorepo)" src="https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/cheerio"> <img alt="GitHub package.json dependency version (subfolder of monorepo)" src="https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/inquirer"> <img alt="GitHub package.json dependency version (subfolder of monorepo)" src="https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/dotenv">
+</p>
 
 ## Troubleshooting
 
