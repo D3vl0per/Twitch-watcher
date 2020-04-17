@@ -15,6 +15,16 @@
  - Network connection (So obvious...)
  - [Nodejs](https://nodejs.org/en/download/) and [NPM](https://www.npmjs.com/get-npm)
 
+## Features
+- 🎥 True HTTP Live Streaming support (Forget the #4000 error code)
+- 🔐 Cookie based login
+- 📜 Auto accept cookie policy 
+- 👨‍💻 Choice random streamer with drop-enabled tag
+- 🤐 Unmute stream
+- 🛠 Detect mature content based stream and interact it
+- 🛡 Proxy option
+- 📦 Deployable to VPS by docker
+
 
 ## Installation
 **!! Working only desktop environment, therefore use my docker image!!**
@@ -30,7 +40,7 @@ Someone please test it 🙁
 6. Install chromium: [TUTORIAL 🤗](https://www.addictivetips.com/ubuntu-linux-tips/install-chromium-on-linux/)
 7. Locate chromium executable: `whereis chromium`
 8. Install the dependencies with `npm install`
-9. After start the program with `npm start`
+9. Start the program with `npm start`
 
 ## Docker
 <p align="center">
@@ -43,8 +53,8 @@ Someone please test it 🙁
 ### Useage
 1. Download docker-compose-example.yml
 2. Rename docker-compose.yml
-3. Replace environments
-4. Run `docker-compose up -d`
+3. Open and replace the **token** environment record
+4. Run with `docker-compose up -d` command
 ## Dependencies
 <p align="center">
 <img alt="GitHub package.json dependency version (subfolder of monorepo)" src="https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/puppeteer-core"> <img alt="GitHub package.json dependency version (subfolder of monorepo)" src="https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/cheerio"> <img alt="GitHub package.json dependency version (subfolder of monorepo)" src="https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/inquirer"> <img alt="GitHub package.json dependency version (subfolder of monorepo)" src="https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/dotenv"> <img alt="GitHub package.json dependency version (subfolder of monorepo)" src="https://img.shields.io/github/package-json/dependency-version/D3vl0per/Valorant-watcher/dayjs">
@@ -119,12 +129,14 @@ Default delay:
 ```javascript
 const scrollDelay = 2000;
 ```
+[Go to code](https://github.com/D3vl0per/Valorant-watcher/blob/12dce8065423861971b7088563ad936b2dcc2559/app.js#L15)
 ___
 ### Something went wrong?
 Try to non-headless mode. Edit headless value to `true`, like this:
 ```javascript
 const showBrowser = true;
 ```
+[Go to code](https://github.com/D3vl0per/Valorant-watcher/blob/12dce8065423861971b7088563ad936b2dcc2559/app.js#L24)
 ___
 ### Proxy?
 
@@ -132,23 +144,29 @@ Yes, of course:
 ```javascript
 const proxy = ""; // "ip:port" By https://github.com/Jan710
 ```
+[Go to code](https://github.com/D3vl0per/Valorant-watcher/blob/12dce8065423861971b7088563ad936b2dcc2559/app.js#L25)  
+  
 OR
 
-Docker env
+With Docker env:
 ```
-proxy=
+proxy=PROXY_IP_ADDRESS:PROXY_PORT
 ```
 ___
 ### Screenshot without non-headless mode
 ```javascript
 const browserScreenshot = false;
 ```
+[Go to code](https://github.com/D3vl0per/Valorant-watcher/blob/12dce8065423861971b7088563ad936b2dcc2559/app.js#L27)
 ## Support
  - Keybase at [https://keybase.io/d3v_](https://keybase.io/d3v_)
+ - Gitter at [https://gitter.im/valorant-watcher/community](https://gitter.im/valorant-watcher/community)
 ## Donations
 [![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/D3v)
 
 ## Disclaimer
-These codes for educational and research purposes only.
-Do not attempt to violate the law with anything contained here.
-I will not be responsible for your any illegal actions.
+These codes for educational and research purposes only.  
+Do not attempt to violate the law with anything contained here.  
+I will not be responsible for your any illegal actions.  
+Reproduction and copy is authorised, provided the source is acknowledged.
+  
