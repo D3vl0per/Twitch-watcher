@@ -4,7 +4,7 @@
 <h1 align="center">Valorant watcher</h1>
 <p align="center"> I spent two days watching Valorant streams to get a drop. I got bored...</p>
 <p align="center">
-<img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/D3vl0per/Valorant-watcher"> <img alt="GitHub" src="https://img.shields.io/github/repo-size/D3vl0per/Valorant-watcher"> <img alt="GitHub repo size" src="https://img.shields.io/github/license/D3vl0per/Valorant-watcher"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/D3vl0per/Valorant-watcher"> <a href="https://asciinema.org/a/cJdGuhhafaUB2n1FuNkEROq0g" target="_blank"><img src="https://asciinema.org/a/cJdGuhhafaUB2n1FuNkEROq0g.svg" /></a>
+<img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/D3vl0per/Valorant-watcher"> <img alt="GitHub" src="https://img.shields.io/github/repo-size/D3vl0per/Valorant-watcher"> <img alt="GitHub repo size" src="https://img.shields.io/github/license/D3vl0per/Valorant-watcher"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/D3vl0per/Valorant-watcher"> <a href="https://asciinema.org/a/rob4Rh1EG4XFVfN4XWK67JSnf" target="_blank"><img src="https://asciinema.org/a/rob4Rh1EG4XFVfN4XWK67JSnf.svg" /></a>
 </p>
 
 
@@ -18,7 +18,7 @@
 ## Features
 - 🎥 True HTTP Live Streaming support (Forget the #4000 error code)
 - 🔐 Cookie based login
-- 📜 Auto accept cookie policy 
+- 📜 Auto accept cookie policy
 - 👨‍💻 Choice random streamer with drop-enabled tag
 - 🤐 Unmute stream
 - 🛠 Detect mature content based stream and interact it
@@ -145,7 +145,7 @@ Yes, of course:
 const proxy = ""; // "ip:port" By https://github.com/Jan710
 ```
 [Go to code](https://github.com/D3vl0per/Valorant-watcher/blob/12dce8065423861971b7088563ad936b2dcc2559/app.js#L25)  
-  
+
 OR
 
 With Docker env:
@@ -169,4 +169,3 @@ These codes for educational and research purposes only.
 Do not attempt to violate the law with anything contained here.  
 I will not be responsible for your any illegal actions.  
 Reproduction and copy is authorised, provided the source is acknowledged.
-  

@@ -14,7 +14,7 @@ exports.askLogin = () => {
   }, {
     name: 'exec',
     type: 'input',
-    message: 'Enter the chromium executable path (usually /usr/bin/chromium-browser or /usr/bin/chromium):',
+    message: 'Enter the chromium executable path (usually /usr/bin/chromium-browser or /usr/bin/chromium or C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe):',
     validate: function(value) {
       if (value.length) {
         return true;
