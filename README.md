@@ -160,7 +160,7 @@ const browserScreenshot = false;
 [Go to code](https://github.com/D3vl0per/Valorant-watcher/blob/12dce8065423861971b7088563ad936b2dcc2559/app.js#L27)
 ## Support
  - Keybase at [https://keybase.io/d3v_](https://keybase.io/d3v_)
- - Gitter at [https://gitter.im/valorant-watcher/community](https://gitter.im/valorant-watcher/community)
+ - Discord at [https://discord.gg/s8AH4aZ](https://discord.gg/s8AH4aZ)
 ## Donations
 [![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/D3v)
 
