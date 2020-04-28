@@ -12,18 +12,18 @@
 ## Requirements
 
  - Windows or Linux OS
- - Network connection (So obvious...)
+ - Network connection (Should be obvious...)
  - [Nodejs](https://nodejs.org/en/download/) and [NPM](https://www.npmjs.com/get-npm)
 
 ## Features
 - 🎥 True HTTP Live Streaming support (Forget the #4000 error code)
-- 🔐 Cookie based login
+- 🔐 Cookie-based login
 - 📜 Auto accept cookie policy
-- 👨‍💻 Choice random streamer with drop-enabled tag
-- 🤐 Unmute stream
-- 🛠 Detect mature content based stream and interact it
+- 👨‍💻 The choice of a random streamer with drop-enabled tag
+- 🤐 Unmuted stream
+- 🛠 Detect mature content-based stream and interact with it
 - 🛡 Proxy option
-- 📽 Auto lowest possible resolution settings
+- 📽 Automatic lowest possible resolution settings
 - 🧰 Highly customizable codebase
 - 📦 Deployable to VPS by docker
 - 🏳️ Helpful support community
@@ -32,23 +32,23 @@
 ## Installation
 
 ### Windows
-1. Login your twitch account
-2. Open inspector(F12 or Ctlr+Shift+I) on main site
-3. Find stored cookie section
+1. Login to your twitch account
+2. Open inspector(F12 or Ctrl+Shift+I) on main site
+3. Find the stored cookie section
 4. Copy **auth-token**
 5. Clone this repo
-6. Install chromium
-7. Usualy path to chromium executable: C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe
+6. Install Chromium
+7. Usually the path to the Chromium executable is: C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe
 8. Install the dependencies with `npm install`
 9. Start the program with `npm start`
 ### Linux
-1. Login your twitch account
-2. Open inspector(F12 or Ctlr+Shift+I) on main site
-3. Find stored cookie section
+1. Login to your twitch account
+2. Open inspector(F12 or Ctrl+Shift+I) on main site
+3. Find the stored cookie section
 4. Copy **auth-token**
 5. Clone this repo
-6. Install chromium: [TUTORIAL 🤗](https://www.addictivetips.com/ubuntu-linux-tips/install-chromium-on-linux/)
-7. Locate chromium executable: `whereis chromium`
+6. Install Chromium: [TUTORIAL 🤗](https://www.addictivetips.com/ubuntu-linux-tips/install-chromium-on-linux/)
+7. Locate Chromium executable: `whereis chromium`
 8. Install the dependencies with `npm install`
 9. Start the program with `npm start`
 
@@ -61,9 +61,9 @@
 >Docker is a set of platform as a service (PaaS) products that uses OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files. All containers are run by a single operating system kernel and therefore use fewer resources than virtual machines.
 ### Requirements
 - [Docker](https://docs.docker.com/get-docker/)
-- [Docker compose](https://docs.docker.com/compose/install/)
+- [Docker-Compose](https://docs.docker.com/compose/install/)
 
-### Useage
+### Usage
 1. Download docker-compose-example.yml
 2. Rename docker-compose.yml
 3. Open and replace the **token** environment record
@@ -75,14 +75,14 @@
 
 ## Troubleshooting
 
-### How token does it look like?
+### How does the token look like?
 auth-token: `rxk38rh5qtyw95fkvm7kgfceh4mh6u`
 ___
 
 
-### streamers.json is empty?
+### Streamers.json is empty?
 
-Try to again with higher delay.
+Try again with higher delay.
 Default delay:
 ```javascript
 const scrollDelay = 2000;
@@ -90,7 +90,7 @@ const scrollDelay = 2000;
 [Go to code](https://github.com/D3vl0per/Valorant-watcher/blob/12dce8065423861971b7088563ad936b2dcc2559/app.js#L15)
 ___
 ### Something went wrong?
-Try to non-headless mode. Edit headless value to `true`, like this:
+Try non-headless mode. Set headless value to `true`, like this:
 ```javascript
 const showBrowser = true;
 ```
@@ -130,7 +130,7 @@ Especially the drop farmers who gather tons of money with this software!🤓
  - Discord at [https://discord.gg/s8AH4aZ](https://discord.gg/s8AH4aZ)
 
 ## Disclaimer
-These codes for educational and research purposes only.  
-Do not attempt to violate the law with anything contained here.  
-I will not be responsible for your any illegal actions.  
+This code is for educational and research purposes only.
+Do not attempt to violate the law with anything contained here.
+I will not be responsible for any illegal actions.
 Reproduction and copy is authorised, provided the source is acknowledged.
