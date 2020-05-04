@@ -1,6 +1,6 @@
 {
   "name": "valorant-watcher",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Automatic watching the twitch to get valorant drop",
   "main": "app.js",
   "scripts": {
