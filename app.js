@@ -71,6 +71,7 @@ async function viewRandomPage(browser, page) {
         browser = newSpawn.browser;
         page = newSpawn.page;
         firstRun = true;
+        browser_last_refresh = dayjs().add(browserClean, browserCleanUnit);
       }
 
       if (dayjs(streamer_last_refresh).isBefore(dayjs())) {
