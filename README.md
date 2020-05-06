@@ -26,9 +26,9 @@
  - Windows or Linux OS
  - Network connection (Should be obvious...)
  - [Nodejs](https://nodejs.org/en/download/) and [NPM](https://www.npmjs.com/get-npm)
-
+ 
 ## Installation
-
+🎥 [Tutorial video by Ziyad](https://youtu.be/bwzv7wT44Ds) 🎥
 ### Windows
 1. Login to your twitch account
 2. Open inspector(F12 or Ctrl+Shift+I) on main site
