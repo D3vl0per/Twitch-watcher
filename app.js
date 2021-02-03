@@ -282,7 +282,9 @@ async function scroll(page, times) {
   for (var i = 0; i < times; i++) {
     await page.evaluate(async (page) => {
       var x = document.getElementsByClassName("scrollable-trigger__wrapper");
-      x[0].scrollIntoView();
+      if (x.length > 0) { // there will be no scroll if there are no active streams
+        x[0].scrollIntoView();
+      }
     });
     await page.waitFor(scrollDelay);
   }
