@@ -26,6 +26,9 @@ const maxWatching = (Number(process.env.maxWatching) || 30); //Minutes
 const streamerListRefresh = (Number(process.env.streamerListRefresh) || 1);
 const streamerListRefreshUnit = (process.env.streamerListRefreshUnit || 'hour'); //https://day.js.org/docs/en/manipulate/add
 
+const channelsWithPriority = process.env.channelsWithPriority ? process.env.channelsWithPriority.split(",") : [];
+const watchAlwaysTopStreamer = (process.env.watchAlwaysTopStreamer || false);
+
 const showBrowser = false; // false state equ headless mode;
 const proxy = (process.env.proxy || ""); // "ip:port" By https://github.com/Jan710
 const proxyAuth = (process.env.proxyAuth || "");
@@ -79,7 +82,22 @@ async function viewRandomPage(browser, page) {
         streamer_last_refresh = dayjs().add(streamerListRefresh, streamerListRefreshUnit); //https://github.com/D3vl0per/Valorant-watcher/issues/25
       }
 
-      let watch = streamers[getRandomInt(0, streamers.length - 1)]; //https://github.com/D3vl0per/Valorant-watcher/issues/27
+      let watch;
+
+      if (watchAlwaysTopStreamer) {
+          watch = streamers[0];
+      } else {
+          watch = streamers[getRandomInt(0, streamers.length - 1)]; //https://github.com/D3vl0per/Valorant-watcher/issues/27
+      }
+
+      if (channelsWithPriority.length > 0 ) {
+          for (let i = 0; i < channelsWithPriority.length; i++) {
+              if (streamers.includes(channelsWithPriority[i])) {
+                  watch = channelsWithPriority[i];
+                  break;
+             }
+         }
+      }
       var sleep = getRandomInt(minWatching, maxWatching) * 60000; //Set watuching timer
 
       console.log('\n🔗 Now watching streamer: ', baseUrl + watch);
